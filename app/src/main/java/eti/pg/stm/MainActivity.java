@@ -25,8 +25,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.activity_main);
+        EditText wysokosc = findViewById(R.id.editText);
+        EditText szerokosc = findViewById(R.id.editText2);
 
+        setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(v ->{
+            GetCords(wysokosc, szerokosc);
+        });
         TextView textWYs = findViewById(R.id.textView);
 
 
@@ -55,9 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (Exception e) {
 
-
         }
-
     }
+    private void GetCords(EditText wysokosc, EditText szerokosc) {
+        String wys = wysokosc.getText().toString();
+        String szer = szerokosc.getText().toString();
+//TextView textWYs = findViewById(R.id.textView);
+        TextView textSzer = findViewById(R.id.textView2);
+//textWYs.setText(wys);
+        textSzer.setText(szer);
 
 }
