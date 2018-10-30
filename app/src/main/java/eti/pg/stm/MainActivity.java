@@ -66,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
     private void GetCords(EditText wysokosc, EditText szerokosc) {
         String wys = wysokosc.getText().toString();
         String szer = szerokosc.getText().toString();
-//TextView textWYs = findViewById(R.id.textView);
+        TextView textWYs = findViewById(R.id.textView);
         TextView textSzer = findViewById(R.id.textView2);
-//textWYs.setText(wys);
+        textWYs.setText(wys);
         textSzer.setText(szer);
-
+    }
 }
